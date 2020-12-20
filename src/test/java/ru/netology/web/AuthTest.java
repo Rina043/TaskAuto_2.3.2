@@ -1,9 +1,7 @@
-package ru.netology.web.ru.netology.web;
+package ru.netology.web;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
-import ru.netology.web.Generation;
-import ru.netology.web.Registration;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
