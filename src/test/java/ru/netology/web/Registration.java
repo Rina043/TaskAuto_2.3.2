@@ -10,4 +10,7 @@ public class Registration {
     private String login;
     private String password;
     private String status;
+
+    public Registration(String login, String password, String active) {
+    }
 }
