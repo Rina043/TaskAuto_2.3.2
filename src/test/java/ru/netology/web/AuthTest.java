@@ -30,10 +30,11 @@ public class AuthTest {
         form.$(cssSelector("[name=login]")).sendKeys(user.getLogin());
         form.$(cssSelector("[name=password]")).sendKeys(user.getPassword());
         form.$(cssSelector("[type=button]")).click();
-        $(byText("Ошибка")).waitUntil(Condition.visible, 15000);
+        $(byText("Пользователь заблокирован")).waitUntil(Condition.visible, 15000);
     }
 
     @Test
+
     void shouldNotLogInIfInvalidLogin() {
         Registration user = Generation.generateNewActiveUserInvalidLogin();
         open("http://localhost:9999");
@@ -41,7 +42,7 @@ public class AuthTest {
         form.$(cssSelector("[name=login]")).sendKeys(user.getLogin());
         form.$(cssSelector("[name=password]")).sendKeys(user.getPassword());
         form.$(cssSelector("[type=button]")).click();
-        $(byText("Ошибка")).waitUntil(Condition.visible, 15000);
+        $(byText("Неверно указан логин или пароль")).waitUntil(Condition.visible, 15000);
     }
 
     @Test
@@ -52,7 +53,7 @@ public class AuthTest {
         form.$(cssSelector("[name=login]")).sendKeys(user.getLogin());
         form.$(cssSelector("[name=password]")).sendKeys(user.getPassword());
         form.$(cssSelector("[type=button]")).click();
-        $(byText("Ошибка")).waitUntil(Condition.visible, 15000);
+        $(byText("Неверно указан логин или пароль")).waitUntil(Condition.visible, 15000);
     }
 }
 
